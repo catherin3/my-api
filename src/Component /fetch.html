@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fetch Api Test</title>
+</head>
+
+<body>
+    <p>Name: <span id="url"></span></p>
+   <script>
+       const api_url = 'https://pokeapi.co/api/v2/pokemon/ditto';
+       async function getData(){
+           const response = await fetch(api_url);
+           const data = await response.json();
+           var url= data.abilities[0].ability.name;
+            document.getElementById('url').textContent = url;
+            console.log(url);
+       }
+       getData();
+
+   </script>
+
+
+</body>
+
+</html>
