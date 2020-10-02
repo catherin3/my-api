@@ -95,7 +95,7 @@ const Pokedex = (props) => {
 
   return (
     <>
-      <AppBar position="static">
+      {/* <AppBar position="static">
         <Toolbar>
           <div className={classes.searchContainer}>
             <SearchIcon className={classes.searchIcon} />
@@ -107,7 +107,7 @@ const Pokedex = (props) => {
             />
           </div>
         </Toolbar>
-      </AppBar>
+      </AppBar> */}
       {pokemonData ? (
         <Grid container spacing={2} className={classes.pokedexContainer}>
           {Object.keys(pokemonData).map(
